@@ -32,7 +32,7 @@ jobs:
       - name: Upload Compiled Files to Azure
         run: |
           az storage blob upload-batch \
-            --account-name nihanthstorageaccount \
+            --account-name nihanthadlsaccount \
             --account-key "${{ secrets.AZURE_STORAGE_KEY }}" \
             --destination '$web' \
             --source ./dist/angular-16-crud
